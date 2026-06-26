@@ -5,116 +5,318 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Guy - Dryer Vent Cleaning Long Island</title>
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  color: #333;
 }
-.container {
-background: white;
-border-radius: 12px;
-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-padding: 60px 40px;
-max-width: 600px;
-text-align: center;
+
+/* NAV */
+nav {
+  background: #1a1a2e;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-h1 {
-font-size: 48px;
-color: #333;
-margin-bottom: 20px;
-font-weight: 700;
+.nav-logo { color: white; font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+.nav-phone a {
+  color: #f0c040;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
 }
-.tagline {
-font-size: 18px;
-color: #666;
-margin-bottom: 15px;
-line-height: 1.6;
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
 }
-.description {
-font-size: 16px;
-color: #777;
-margin-bottom: 40px;
-line-height: 1.8;
+.hero h1 {
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  color: #f0c040;
 }
-.buttons {
-display: flex;
-flex-direction: column;
-gap: 15px;
+.hero h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #ccc;
 }
-.btn {
-padding: 16px 32px;
-font-size: 18px;
-font-weight: 600;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-text-decoration: none;
-display: inline-block;
-transition: transform 0.2s, box-shadow 0.2s;
+.hero p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.btn-call {
-background: #667eea;
-color: white;
+.btn-primary {
+  background: #f0c040;
+  color: #1a1a2e;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.btn-call:hover {
-background: #5568d3;
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(240,192,64,0.4);
 }
-.btn-email {
-background: #f0f0f0;
-color: #333;
-border: 2px solid #ddd;
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: transform 0.2s;
 }
-.btn-email:hover {
-background: #e8e8e8;
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.1);
 }
-.footer {
-margin-top: 50px;
-font-size: 14px;
-color: #999;
-border-top: 1px solid #eee;
-padding-top: 30px;
+
+/* URGENCY BAR */
+.urgency-bar {
+  background: #c0392b;
+  color: white;
+  text-align: center;
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 600;
 }
+.urgency-bar span { font-weight: 800; font-size: 18px; }
+
+/* SERVICES */
 .services {
-margin: 30px 0;
-padding: 20px;
-background: #f9f9f9;
-border-radius: 8px;
-font-size: 14px;
-color: #666;
+  padding: 80px 40px;
+  background: #f8f9fa;
+  text-align: center;
+}
+.services h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+.services .subtitle {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.service-icon { font-size: 48px; margin-bottom: 20px; }
+.service-card h3 { font-size: 20px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+.service-card p { font-size: 14px; color: #777; line-height: 1.6; }
+.coming-soon {
+  display: inline-block;
+  background: #f0c040;
+  color: #1a1a2e;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* WHY */
+.why {
+  padding: 80px 40px;
+  background: white;
+  text-align: center;
+}
+.why h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 50px;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.why-card {
+  padding: 30px;
+  border-radius: 12px;
+  background: #f8f9fa;
+}
+.why-icon { font-size: 40px; margin-bottom: 15px; }
+.why-card h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+.why-card p { font-size: 14px; color: #777; line-height: 1.6; }
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+}
+.cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 15px; }
+.cta p { font-size: 18px; color: #aaa; margin-bottom: 40px; }
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #777;
+  text-align: center;
+  padding: 30px 40px;
+  font-size: 14px;
+}
+footer a { color: #f0c040; text-decoration: none; }
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 42px; }
+  .hero h2 { font-size: 20px; }
+  nav { padding: 15px 20px; }
+  .hero { padding: 60px 20px; }
+  .services, .why, .cta { padding: 60px 20px; }
 }
 </style>
 </head>
 <body>
-<div class="container">
-<h1>The Guy</h1>
-<p class="tagline">Professional Dryer Vent Cleaning</p>
-<p class="description">Serving Nassau & Suffolk County with reliable, expert dryer vent cleaning. Expanding into gutter cleaning, holiday lighting, and snow removal.</p>
-<div class="services">
-✓ Dryer Vent Cleaning<br>
-✓ Gutter Cleaning (Coming Soon)<br>
-✓ Holiday Lighting (Coming Soon)<br>
-✓ Snow Removal (Coming Soon)
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">THE GUY</div>
+  <div class="nav-phone"><a href="tel:5163146072">📞 (516) 314-6072</a></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>THE GUY</h1>
+  <h2>Professional Home Services • Long Island, NY</h2>
+  <p>Fast, reliable dryer vent cleaning for Nassau & Suffolk County homeowners. Trusted work at fair prices — no nonsense.</p>
+  <div class="hero-buttons">
+    <a href="tel:5163146072" class="btn-primary">📞 Call Now: (516) 314-6072</a>
+    <a href="mailto:ContactTheGuyLI@gmail.com" class="btn-secondary">✉️ Send an Email</a>
+  </div>
+</section>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  🔥 <span>2,900+ dryer fires</span> occur every year in the US — clogged vents are the #1 cause. Don't wait.
 </div>
-<div class="buttons">
-<a href="tel:5163146072" class="btn btn-call">Call Now: (516) 314-6072</a>
-<a href="mailto:ContactTheGuyLI@gmail.com" class="btn btn-email">Email: ContactTheGuyLI@gmail.com</a>
-</div>
-<div class="footer">
-<p>The Guy Home Services • Long Island, NY</p>
-</div>
-</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>What We Do</h2>
+  <p class="subtitle">Serving all of Nassau & Suffolk County</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🌀</div>
+      <h3>Dryer Vent Cleaning</h3>
+      <p>Remove dangerous lint buildup, improve drying efficiency, and reduce fire risk in your home.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🍂</div>
+      <h3>Gutter Cleaning</h3>
+      <p>Keep your gutters clear and your home protected from water damage.</p>
+      <span class="coming-soon">Coming Soon</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💡</div>
+      <h3>Holiday Lighting</h3>
+      <p>Professional holiday light installation and takedown — stress free every season.</p>
+      <span class="coming-soon">Coming Soon</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">❄️</div>
+      <h3>Snow Removal</h3>
+      <p>Reliable snow and ice removal to keep your property safe all winter long.</p>
+      <span class="coming-soon">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <h2>Why Choose The Guy?</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">✅</div>
+      <h3>Hands-On Experience</h3>
+      <p>Real experience, not just a franchise. You get the guy who actually does the work.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h3>Fast & Reliable</h3>
+      <p>We show up when we say we will and get the job done right the first time.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Fair Pricing</h3>
+      <p>No hidden fees. Straightforward pricing for quality work you can trust.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📍</div>
+      <h3>Local & Proud</h3>
+      <p>Born and raised on Long Island. We take care of our neighbors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Book?</h2>
+  <p>Call or email us today — we'll get you taken care of fast.</p>
+  <div class="cta-buttons">
+    <a href="tel:5163146072" class="btn-primary">📞 (516) 314-6072</a>
+    <a href="mailto:ContactTheGuyLI@gmail.com" class="btn-secondary">✉️ ContactTheGuyLI@gmail.com</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 The Guy • Long Island, NY | <a href="mailto:ContactTheGuyLI@gmail.com">ContactTheGuyLI@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
