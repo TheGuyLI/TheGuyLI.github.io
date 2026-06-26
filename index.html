@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -168,6 +169,45 @@ nav {
 .why-card h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
 .why-card p { font-size: 14px; color: #777; line-height: 1.6; }
 
+.reviews {
+  padding: 80px 40px;
+  background: #1a1a2e;
+  text-align: center;
+}
+.reviews h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #f0c040;
+  margin-bottom: 15px;
+}
+.reviews p {
+  color: #aaa;
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-review {
+  background: #f0c040;
+  color: #1a1a2e;
+  padding: 18px 40px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-review:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(240,192,64,0.4);
+}
+.stars {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
 .cta {
   background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
   color: white;
@@ -197,7 +237,7 @@ footer a { color: #f0c040; text-decoration: none; }
   .hero h2 { font-size: 20px; }
   nav { padding: 15px 20px; }
   .hero { padding: 60px 20px; }
-  .services, .why, .cta { padding: 60px 20px; }
+  .services, .why, .cta, .reviews { padding: 60px 20px; }
 }
 </style>
 </head>
@@ -273,6 +313,13 @@ footer a { color: #f0c040; text-decoration: none; }
       <p>Born and raised on Long Island. We take care of our neighbors.</p>
     </div>
   </div>
+</section>
+
+<section class="reviews">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <h2>Happy With Our Work?</h2>
+  <p>Leave us a quick Google review — it takes 30 seconds and helps us out more than you know.</p>
+  <a href="https://g.page/r/CSrDf02UysOLEAE/review" target="_blank" class="btn-review">⭐ Leave a Google Review</a>
 </section>
 
 <section class="cta">
